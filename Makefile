@@ -6,11 +6,11 @@
 #    By: ajubert <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/05 14:28:27 by ajubert           #+#    #+#              #
-#    Updated: 2016/08/30 18:19:23 by ajubert          ###   ########.fr        #
+#    Updated: 2016/09/01 04:00:09 by ajubert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=		ajubert.filler
+NAME=		lem-in
 COMPILER=	gcc
 FLAG=		-g -Wall -Werror -Wextra
 LIB=		libft.a
@@ -18,6 +18,17 @@ INCLUDES=	-I ./libft/includes/
 vpath %.c
 
 SRC_C=	main.c\
+		recup_salle.c\
+		is_infos.c\
+		free_line.c\
+		ft_print_liaison.c\
+		ft_print_salle.c\
+		get_coor.c\
+		get_salle.c\
+		is_liaison.c\
+		recup_liaison.c\
+		recup_nb_ant.c\
+		list.c
 
 SRC_O=		$(SRC_C:.c=.o)
 

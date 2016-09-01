@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   recup_salle.c                                      :+:      :+:    :+:   */
+/*   is_infos.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/30 21:59:15 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/01 04:14:28 by ajubert          ###   ########.fr       */
+/*   Created: 2016/08/31 22:10:25 by ajubert           #+#    #+#             */
+/*   Updated: 2016/09/01 04:13:09 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-int		recup_salle(t_e *e)
+int		is_infos(t_e *e)
 {
-	while (get_next_line(0, &e->line) > 0)
+	if (e->line[0] == 'L')
+		return (0);
+	if (ft_strcmp("##start", e->line) == 0 && e->start != 0)
+		return (0);
+	if (ft_strcmp("##start", e->line) == 0)
+		e->start = 1;
+	if (ft_strcmp("##end", e->line) == 0 && e->end != 0)
+		return (0);
+	if (ft_strcmp("##end", e->line) == 0)
+		e->end = 1;
+	while (e->line[0] == '#')
 	{
-		ft_printf("avant is_infos\n");
-		if (!is_infos(e))
-			return (0);
-		ft_printf("avant is_liaison\n");
-		if (is_liaison(e))
-		{
-			return (1);
-		}
-		ft_printf("avant get_salle get_coor\n");
-		if (!get_salle(e) || !get_coor(e))
-			return (0);
 		free_line(&e->line);
+		if (get_next_line(0, &e->line) <= 0)
+			return (0);
 	}
-	return (0);
+	return (1);
 }
