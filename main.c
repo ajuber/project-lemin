@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/30 18:17:56 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/01 04:09:03 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/01 05:20:19 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int		main(void)
 		return (0);
 	ft_print_salle(&e);
 	ft_print_liaison(&e);
+	convert_liaison(&e);
 	return (0);
 }

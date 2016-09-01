@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/30 18:22:41 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/01 03:56:26 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/01 05:36:20 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ typedef struct				s_liste
 	struct s_liste			*next;
 }							t_liste;
 
+typedef struct				s_liste1
+{
+	char					*str;
+	struct s_liste1			*next;
+}							t_liste1;
+
 typedef struct		s_e
 {
 	char			*line;
@@ -31,7 +37,8 @@ typedef struct		s_e
 	t_liste			*salle;
 	t_liste			*liaison;
 	char			***liaison1;
-	char			***chemin;
+	t_liste1		**chemin;
+	int				nb_liaison;
 }					t_e;
 
 int					is_infos(t_e *e);

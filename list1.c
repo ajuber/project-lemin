@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list.c                                             :+:      :+:    :+:   */
+/*   list1.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/11 15:32:08 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/01 05:23:36 by ajubert          ###   ########.fr       */
+/*   Created: 2016/09/01 05:16:28 by ajubert           #+#    #+#             */
+/*   Updated: 2016/09/01 05:18:03 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-static t_liste		*new_list(char *str, char *str1, int s)
+static t_liste1		*new_list(char *str)
 {
-	t_liste *new;
+	t_liste1 *new;
 
-	if (!(new = (t_liste *)malloc(sizeof(t_liste))))
+	if (!(new = (t_liste1 *)malloc(sizeof(t_liste1))))
 		return (NULL);
 	new->next = NULL;
-	if (!(new->str = (char *)malloc(sizeof(char) * (s + 1))))
-		return (NULL);
-	ft_strncpy(new->str, str, s);
-	new->str[s] = '\0';
-	if (!(new->str1 = ft_strdup(str1)))
+	if (!(new->str = ft_strdup(str)))
 		return (NULL);
 	return (new);
 }
 
-t_liste		*push_back_lem(t_liste *begin_list, char *str, char *str1, int s)
+t_liste		*push_back_lem1(t_liste1 *begin_list, char *str)
 {
-	t_liste *new;
-	t_liste *tmp;
+	t_liste1 *new;
+	t_liste1 *tmp;
 
-	if (!(new = new_list(str, str1, s)))
+	if (!(new = new_list(str)))
 		return (NULL);
 	if (begin_list == NULL)
 		begin_list = new;
@@ -47,26 +43,10 @@ t_liste		*push_back_lem(t_liste *begin_list, char *str, char *str1, int s)
 	return (begin_list);
 }
 
-int					count_list_lem(t_liste *begin_list)
+void				ft_free_list_lem1(t_liste1 **begin_list)
 {
-	int			i;
-	t_liste		*tmp;
-
-	tmp = begin_list;
-	i = 0;
-	while (tmp)
-	{
-		i++;
-		tmp = tmp->next;
-	}
-	return (i);
-}
-
-
-void				ft_free_list_lem(t_liste **begin_list)
-{
-	t_liste *tmp;
-	t_liste *tmp1;
+	t_liste1 *tmp;
+	t_liste1 *tmp1;
 
 	tmp1 = begin_list[0];
 	if (tmp1 && tmp1->next)
