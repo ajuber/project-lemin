@@ -6,7 +6,7 @@
 #    By: ajubert <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/05 14:28:27 by ajubert           #+#    #+#              #
-#    Updated: 2016/09/02 04:04:25 by ajubert          ###   ########.fr        #
+#    Updated: 2016/09/02 05:24:48 by ajubert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,8 @@ SRC_C=	main.c\
 		check_liaison.c\
 		chemin_valid.c\
 		del_last_salle.c\
-		new_chemin.c
+		new_chemin.c\
+		del_chemin.c
 
 SRC_O=		$(SRC_C:.c=.o)
 

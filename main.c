@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/30 18:17:56 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/02 03:56:36 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/02 05:24:19 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,9 @@ int		main(void)
 		return (0);
 	create_chemin(&e);
 	ft_print_chemin(&e);
+	ft_printf("%d\n", e.nb_chemin);
+	del_chemin(&e);
+	ft_print_chemin(&e);
+	ft_printf("%d\n", e.nb_chemin);
 	return (0);
 }

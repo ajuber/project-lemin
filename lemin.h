@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/30 18:22:41 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/02 04:01:54 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/02 05:23:33 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,7 @@ int					new_chemin(t_e *e);
 void				del_last_salle(t_e *e);
 int					create_chemin(t_e *e);
 void				ft_print_chemin(t_e *e);
+void				del_chemin(t_e *e);
+void				ft_free_list_lem1(t_liste1 **begin_list);
 
 #endif

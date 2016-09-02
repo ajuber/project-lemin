@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 00:31:36 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/02 00:35:12 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/02 05:18:20 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ t_l_chemin				*push_back_chemin(t_l_chemin *begin_list)
 	return (begin_list);
 }
 
-void				ft_free_list_lem1(t_liste1 **begin_list)
+/*void				ft_free_list_lem1(t_liste1 **begin_list)
 {
 	t_liste1 *tmp;
 	t_liste1 *tmp1;
@@ -62,4 +62,4 @@ void				ft_free_list_lem1(t_liste1 **begin_list)
 		free(begin_list[0]);
 	tmp1 = NULL;
 	begin_list[0] = NULL;
-}
+}*/
