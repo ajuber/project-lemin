@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 00:09:41 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/02 04:07:04 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/02 05:31:04 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int		create_chemin(t_e *e)
 //	}
 	while (i < e->nb_liaison)
 	{
-		ft_printf("%d\n", i);
 		if (check_liaison(e, i) != 0)
 		{
 			if (!(add_salle(e)))
