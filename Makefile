@@ -6,7 +6,7 @@
 #    By: ajubert <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/05 14:28:27 by ajubert           #+#    #+#              #
-#    Updated: 2016/09/01 04:00:09 by ajubert          ###   ########.fr        #
+#    Updated: 2016/09/02 04:04:25 by ajubert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,20 @@ SRC_C=	main.c\
 		is_liaison.c\
 		recup_liaison.c\
 		recup_nb_ant.c\
-		list.c
+		list.c\
+		convert_liaison.c\
+		ft_print_convert_liaison.c\
+		add_infos.c\
+		no_start_no_end.c\
+		create_chemin.c\
+		ft_print_chemin.c\
+		list1.c\
+		liste_chemin.c\
+		add_salle.c\
+		check_liaison.c\
+		chemin_valid.c\
+		del_last_salle.c\
+		new_chemin.c
 
 SRC_O=		$(SRC_C:.c=.o)
 

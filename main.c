@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/30 18:17:56 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/01 05:20:19 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/02 03:56:36 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,20 @@ int		main(void)
 	if (!recup_salle(&e))
 		return (0);
 	ft_printf("avant recup_liaison\n");
+	if (!no_start_no_end(&e))
+		return (0);
 	if (!recup_liaison(&e))
 		return (0);
 	ft_print_salle(&e);
 	ft_print_liaison(&e);
-	convert_liaison(&e);
+	if (!convert_liaison(&e))
+		return (0);
+	ft_print_convert_liaison(&e);
+	if (!(e.chemin = push_back_chemin(e.chemin)))
+		return (0);
+	if (!(e.chemin->chemin = push_back_lem1(e.chemin->chemin, e.start1)))
+		return (0);
+	create_chemin(&e);
+	ft_print_chemin(&e);
 	return (0);
 }

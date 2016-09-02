@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   recup_salle.c                                      :+:      :+:    :+:   */
+/*   ft_print_chemin.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/30 21:59:15 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/01 23:14:51 by ajubert          ###   ########.fr       */
+/*   Created: 2016/09/02 03:56:56 by ajubert           #+#    #+#             */
+/*   Updated: 2016/09/02 04:01:22 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-int		recup_salle(t_e *e)
+void	ft_print_chemin(t_e *e)
 {
-	while (get_next_line(0, &e->line) > 0)
+	t_l_chemin *tmp;
+	t_liste1 *tmp1;
+
+	tmp = e->chemin;
+	ft_printf("print chemin\n");
+	while (tmp)
 	{
-		ft_printf("avant is_infos\n");
-		if (!is_infos(e))
-			return (0);
-		ft_printf("avant is_liaison\n");
-		if (is_liaison(e))
+		tmp1 = tmp->chemin;
+		while (tmp1)
 		{
-			return (1);
+			ft_printf("%s-", tmp1->str);
+			tmp1 = tmp1->next;
 		}
-		ft_printf("avant get_salle get_coor\n");
-		if (!get_salle(e) || !get_coor(e))
-			return (0);
-		if (e->start == 1 || e->end == 1)
-			if (!add_infos(e))
-				return (0);
-		free_line(&e->line);
+		tmp = tmp->next;
+		ft_printf("\n");
 	}
-	return (0);
 }
