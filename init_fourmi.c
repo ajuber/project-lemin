@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chemin_valid.c                                     :+:      :+:    :+:   */
+/*   init_fourmi.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/02 03:23:05 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/04 17:50:40 by ajubert          ###   ########.fr       */
+/*   Created: 2016/09/04 21:28:23 by ajubert           #+#    #+#             */
+/*   Updated: 2016/09/04 21:59:52 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-int		chemin_valid(t_e *e)
+int		init_fourmi(t_e *e)
 {
-	t_l_chemin *tmp;
-	t_liste1 *tmp1;
+	int i;
 
-	tmp = e->chemin;
-	while (tmp->next)
-		tmp = tmp->next;
-	tmp1 = tmp->chemin;
-	while (tmp1->next)
-		tmp1 = tmp1->next;
-	if (ft_strcmp(tmp1->str, e->end1))
+	i = 0;
+	if (!(e->fourmi = (t_fourmi *)malloc(sizeof(t_fourmi) * e->nb_ant)))
 		return (0);
-	e->nb_chemin++;
+	while (i < e->nb_ant)
+	{
+		e->fourmi[i].chemin = -1;
+		e->fourmi[i].salle = 0;
+		e->fourmi[i].valid = 0;
+		i++;
+	}
 	return (1);
 }

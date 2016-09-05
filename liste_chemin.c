@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 00:31:36 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/02 05:18:20 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/04 17:28:35 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static t_l_chemin		*new_list()
 		return (NULL);
 	new->next = NULL;
 	new->chemin = NULL;
+	new->nb_salle = 0;
 	return (new);
 }
 

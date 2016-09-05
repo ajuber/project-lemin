@@ -1,0 +1,86 @@
+L1-2 L2-3 L3-h1j0
+L1-1 L2-1 L3-4 L4-2 L5-3 L6-h1j0
+L3-jhf L4-1 L5-1 L6-4 L7-2 L8-3 L9-h1j0
+L3-jhefvk L6-jhf L7-1 L8-1 L9-4 L10-2 L11-3 L12-h1j0
+L3-1 L6-jhefvk L9-jhf L10-1 L11-1 L12-4 L13-2 L14-3 L15-h1j0
+L6-1 L9-jhefvk L12-jhf L13-1 L14-1 L15-4 L16-2 L17-3 L18-h1j0
+L9-1 L12-jhefvk L15-jhf L16-1 L17-1 L18-4 L19-2 L20-3 L21-h1j0
+L12-1 L15-jhefvk L18-jhf L19-1 L20-1 L21-4 L22-2 L23-3 L24-h1j0
+L15-1 L18-jhefvk L21-jhf L22-1 L23-1 L24-4 L25-2 L26-3 L27-h1j0
+L18-1 L21-jhefvk L24-jhf L25-1 L26-1 L27-4 L28-2 L29-3 L30-h1j0
+L21-1 L24-jhefvk L27-jhf L28-1 L29-1 L30-4 L31-2 L32-3 L33-h1j0
+L24-1 L27-jhefvk L30-jhf L31-1 L32-1 L33-4 L34-2 L35-3 L36-h1j0
+L27-1 L30-jhefvk L33-jhf L34-1 L35-1 L36-4 L37-2 L38-3 L39-h1j0
+L30-1 L33-jhefvk L36-jhf L37-1 L38-1 L39-4 L40-2 L41-3 L42-h1j0
+L33-1 L36-jhefvk L39-jhf L40-1 L41-1 L42-4
+L36-1 L39-jhefvk L42-jhf
+L39-1 L42-jhefvk
+L42-1
+
+L1-2 L2-3 L3-h1j0
+L1-1 L2-1 L3-4 L4-2 L5-3 L6-h1j0
+L3-jhf L4-1 L5-1 L6-4 L7-2 L8-3 L9-h1j0
+L3-jhefvk L6-jhf L7-1 L8-1 L9-4 L10-2 L11-3 L12-h1j0
+L3-1 L6-jhefvk L9-jhf L10-1 L11-1 L12-4 L13-2 L14-3 L15-h1j0
+L6-1 L9-jhefvk L12-jhf L13-1 L14-1 L15-4 L16-2 L17-3 L18-h1j0
+L9-1 L12-jhefvk L15-jhf L16-1 L17-1 L18-4 L19-2 L20-3 L21-h1j0
+L12-1 L15-jhefvk L18-jhf L19-1 L20-1 L21-4 L22-2 L23-3 L24-h1j0
+L15-1 L18-jhefvk L21-jhf L22-1 L23-1 L24-4 L25-2 L26-3 L27-h1j0
+L18-1 L21-jhefvk L24-jhf L25-1 L26-1 L27-4 L28-2 L29-3 L30-h1j0
+L21-1 L24-jhefvk L27-jhf L28-1 L29-1 L30-4 L31-2 L32-3 L33-h1j0
+L24-1 L27-jhefvk L30-jhf L31-1 L32-1 L33-4 L34-2 L35-3 L36-h1j0
+L27-1 L30-jhefvk L33-jhf L34-1 L35-1 L36-4 L37-2 L38-3 L39-h1j0
+L30-1 L33-jhefvk L36-jhf L37-1 L38-1 L39-4 L40-2 L41-3 L42-h1j0
+L33-1 L36-jhefvk L39-jhf L40-1 L41-1 L42-4
+L36-1 L39-jhefvk L42-jhf
+L39-1 L42-jhefvk
+L42-1
+
+
+
+
+
+
+
+
+L1-2 L2-3 L3-h1j0
+L1-1 L2-1 L3-4 L4-2 L5-3 L6-h1j0
+L3-jhf L4-1 L5-1 L6-4 L7-2 L8-3 L9-h1j0
+L3-jhefvk L6-jhf L7-1 L8-1 L9-4 L10-2 L11-3 L12-h1j0
+L3-rqhww L6-jhefvk L9-jhf L10-1 L11-1 L12-4 L13-2 L14-3 L15-h1j0
+L3-gjkahba L6-rqhww L9-jhefvk L12-jhf L13-1 L14-1 L15-4 L16-2 L17-3 L18-h1j0
+L3-1 L6-gjkahba L9-rqhww L12-jhefvk L15-jhf L16-1 L17-1 L18-4 L19-2 L20-3 L21-h1j0
+L6-1 L9-gjkahba L12-rqhww L15-jhefvk L18-jhf L19-1 L20-1 L21-4 L22-2 L23-3 L24-h1j0
+L9-1 L12-gjkahba L15-rqhww L18-jhefvk L21-jhf L22-1 L23-1 L24-4 L25-2 L26-3 L27-h1j0
+L12-1 L15-gjkahba L18-rqhww L21-jhefvk L24-jhf L25-1 L26-1 L27-4 L28-2 L29-3 L30-h1j0
+L15-1 L18-gjkahba L21-rqhww L24-jhefvk L27-jhf L28-1 L29-1 L30-4 L31-2 L32-3 L33-h1j0
+L18-1 L21-gjkahba L24-rqhww L27-jhefvk L30-jhf L31-1 L32-1 L33-4 L34-2 L35-3 L36-h1j0
+L21-1 L24-gjkahba L27-rqhww L30-jhefvk L33-jhf L34-1 L35-1 L36-4 L37-2 L38-3 L39-h1j0
+L24-1 L27-gjkahba L30-rqhww L33-jhefvk L36-jhf L37-1 L38-1 L39-4 L40-2 L41-3 L42-h1j0
+L27-1 L30-gjkahba L33-rqhww L36-jhefvk L39-jhf L40-1 L41-1 L42-4
+L30-1 L33-gjkahba L36-rqhww L39-jhefvk L42-jhf
+L33-1 L36-gjkahba L39-rqhww L42-jhefvk
+L36-1 L39-gjkahba L42-rqhww
+L39-1 L42-gjkahba
+L42-1
+
+
+
+
+L1-2 L2-3 L3-h1j0
+L1-1 L2-1 L3-4 L4-2 L5-3 L6-h1j0
+L3-jhf L4-1 L5-1 L6-4 L7-2 L8-3 L9-h1j0
+L3-jhefvk L6-jhf L7-1 L8-1 L9-4 L10-2 L11-3 L12-h1j0
+L3-rqhww L6-jhefvk L9-jhf L10-1 L11-1 L12-4 L13-2 L14-3 L15-h1j0
+L3-gjkahba L6-rqhww L9-jhefvk L12-jhf L13-1 L14-1 L15-4 L16-2 L17-3 L18-h1j0
+L3-1 L6-gjkahba L9-rqhww L12-jhefvk L15-jhf L16-1 L17-1 L18-4 L19-2 L20-3 L21-h1j0
+L6-1 L9-gjkahba L12-rqhww L15-jhefvk L18-jhf L19-1 L20-1 L21-4 L22-2 L23-3 L24-h1j0
+L9-1 L12-gjkahba L15-rqhww L18-jhefvk L21-jhf L22-1 L23-1 L24-4 L25-2 L26-3 L27-h1j0
+L12-1 L15-gjkahba L18-rqhww L21-jhefvk L24-jhf L25-1 L26-1 L27-4 L28-2 L29-3 L30-h1j0
+L15-1 L18-gjkahba L21-rqhww L24-jhefvk L27-jhf L28-1 L29-1 L30-4 L31-2 L32-3 L33-h1j0
+L18-1 L21-gjkahba L24-rqhww L27-jhefvk L30-jhf L31-1 L32-1 L33-4 L34-2 L35-3
+L21-1 L24-gjkahba L27-rqhww L30-jhefvk L33-jhf L34-1 L35-1 L36-2 L37-3
+L24-1 L27-gjkahba L30-rqhww L33-jhefvk L36-1 L37-1 L38-2 L39-3
+L27-1 L30-gjkahba L33-rqhww L38-1 L39-1 L40-2 L41-3
+L30-1 L33-gjkahba L40-1 L41-1 L42-2
+L33-1 L42-1

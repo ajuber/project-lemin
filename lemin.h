@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/30 18:22:41 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/02 05:23:33 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/05 01:54:48 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,31 @@ typedef struct				s_liste1
 
 typedef struct				s_l_chemin
 {
+	int						nb_salle;
 	t_liste1				*chemin;
 	struct s_l_chemin		*next;
 }							t_l_chemin;
+
+typedef struct				s_tab_chemin
+{
+	char					**tab;
+	int						nb_salle;
+	int						valid;
+}							t_tab_chemin;
+
+typedef struct				s_fourmi
+{
+	int						chemin;
+	int						salle;
+	int						valid;
+}							t_fourmi;
+
+typedef struct				s_order
+{
+	int						ind;
+	int						nb_salle;
+	int						valid;
+}							t_order;
 
 typedef struct		s_e
 {
@@ -46,10 +68,16 @@ typedef struct		s_e
 	t_liste			*liaison;
 	char			***liaison1;
 	t_l_chemin		*chemin;
-	char			***chemins;
 	int				nb_liaison;
 	char			*new_salle;
 	int				nb_chemin;
+	t_tab_chemin	*chemins;
+	t_fourmi		*fourmi;
+	int				nb_fourmi;
+	t_order			*chemin_order;
+	int				nb_real_chemin;
+	int				ind_max;
+	int				nb_fourmi_parti;
 }					t_e;
 
 int					is_infos(t_e *e);
@@ -79,5 +107,13 @@ int					create_chemin(t_e *e);
 void				ft_print_chemin(t_e *e);
 void				del_chemin(t_e *e);
 void				ft_free_list_lem1(t_liste1 **begin_list);
+int					convert_chemin(t_e *e);
+void				ft_print_convert_chemin(t_e *e);
+void				invalid_chemin(t_e *e);
+int					parcours(t_e *e);
+int					init_fourmi(t_e *e);
+void				ft_print_parcours(t_e *e);
+int					create_order(t_e *e);
+void				calcul_invalid(t_e *e);
 
 #endif

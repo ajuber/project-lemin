@@ -6,7 +6,7 @@
 #    By: ajubert <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/05 14:28:27 by ajubert           #+#    #+#              #
-#    Updated: 2016/09/02 05:24:48 by ajubert          ###   ########.fr        #
+#    Updated: 2016/09/05 01:32:35 by ajubert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,15 @@ SRC_C=	main.c\
 		chemin_valid.c\
 		del_last_salle.c\
 		new_chemin.c\
-		del_chemin.c
+		del_chemin.c\
+		convert_chemin.c\
+		ft_print_convert_chemin.c\
+		invalid_chemin.c\
+		parcours.c\
+		ft_print_parcours.c\
+		init_fourmi.c\
+		calcul_invalid.c\
+		create_order.c
 
 SRC_O=		$(SRC_C:.c=.o)
 

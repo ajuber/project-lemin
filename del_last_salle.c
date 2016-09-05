@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 03:48:33 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/02 03:54:31 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/04 17:38:37 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	del_last_salle(t_e *e)
 	tmp = e->chemin;
 	while (tmp->next)
 		tmp = tmp->next;
+	tmp->nb_salle -= 1;
 	tmp1 = tmp->chemin;
 	tmp1_previous = tmp1;
 	if (tmp1->next)

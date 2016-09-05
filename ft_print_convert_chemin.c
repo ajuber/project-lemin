@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chemin_valid.c                                     :+:      :+:    :+:   */
+/*   ft_print_convert_chemin.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/02 03:23:05 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/04 17:50:40 by ajubert          ###   ########.fr       */
+/*   Created: 2016/09/04 19:57:13 by ajubert           #+#    #+#             */
+/*   Updated: 2016/09/04 20:42:10 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-int		chemin_valid(t_e *e)
+void	ft_print_convert_chemin(t_e *e)
 {
-	t_l_chemin *tmp;
-	t_liste1 *tmp1;
+	int i;
+	int j;
 
-	tmp = e->chemin;
-	while (tmp->next)
-		tmp = tmp->next;
-	tmp1 = tmp->chemin;
-	while (tmp1->next)
-		tmp1 = tmp1->next;
-	if (ft_strcmp(tmp1->str, e->end1))
-		return (0);
-	e->nb_chemin++;
-	return (1);
+	i = 0;
+	ft_printf("convert_chemin\n");
+	while (i < e->nb_chemin)
+	{
+		j = 0;
+		while (j < e->chemins[i].nb_salle)
+		{
+			if (e->chemins[i].valid)
+				ft_printf("%s-", e->chemins[i].tab[j]);
+			j++;
+		}
+		ft_printf("\n");
+		i++;
+	}
 }
