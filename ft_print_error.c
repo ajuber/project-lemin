@@ -1,37 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   del_last_salle.c                                   :+:      :+:    :+:   */
+/*   ft_print_error.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/02 03:48:33 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/07 00:10:07 by ajubert          ###   ########.fr       */
+/*   Created: 2016/09/06 22:31:07 by ajubert           #+#    #+#             */
+/*   Updated: 2016/09/07 00:01:34 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-void	del_last_salle(t_e *e)
+int		ft_print_error(t_e *e)
 {
-	t_l_chemin		*tmp;
-	t_liste1		*tmp1;
-	t_liste1		*tmp1_previous;
-
-	tmp = e->chemin;
-	while (tmp->next)
-		tmp = tmp->next;
-	tmp->nb_salle -= 1;
-	tmp1 = tmp->chemin;
-	tmp1_previous = tmp1;
-	if (tmp1->next)
-		tmp1 = tmp1->next;
-	while (tmp1->next)
-	{
-		tmp1 = tmp1->next;
-		tmp1_previous = tmp1_previous->next;
-	}
-	free(tmp1->str);
-	free(tmp1);
-	tmp1_previous->next = NULL;
+	fin_lemin(e);
+	ft_printf_fd(2, "ERROR\n");
+	exit(0);
 }

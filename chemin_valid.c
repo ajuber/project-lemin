@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 03:23:05 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/04 17:50:40 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/07 00:28:23 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		chemin_valid(t_e *e)
 {
-	t_l_chemin *tmp;
-	t_liste1 *tmp1;
+	t_l_chemin	*tmp;
+	t_liste1	*tmp1;
 
 	tmp = e->chemin;
 	while (tmp->next)

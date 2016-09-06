@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/06 03:17:46 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/06 03:31:50 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/07 00:06:41 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,8 @@ void	ft_free_tab_chemin(t_e *e, t_tab_chemin **begin_list)
 				free_line(&begin_list[0][i].tab[j]);
 				j++;
 			}
-	//		if (begin_list[0])
-	//		{
-				free(begin_list[0][i].tab);
-				begin_list[0][i].tab = NULL;
-	//		}
+			free(begin_list[0][i].tab);
+			begin_list[0][i].tab = NULL;
 			i++;
 		}
 	}

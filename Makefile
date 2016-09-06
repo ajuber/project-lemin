@@ -6,7 +6,7 @@
 #    By: ajubert <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/05 14:28:27 by ajubert           #+#    #+#              #
-#    Updated: 2016/09/06 05:53:42 by ajubert          ###   ########.fr        #
+#    Updated: 2016/09/06 22:35:47 by ajubert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,8 @@ SRC_C=	main.c\
 		ft_free_chemin_order.c\
 		ft_print_help.c\
 		calc_nb_chemin.c\
-		print_nb_salle.c
+		print_nb_salle.c\
+		ft_print_error.c
 
 SRC_O=		$(SRC_C:.c=.o)
 

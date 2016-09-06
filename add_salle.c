@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 01:14:47 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/04 17:37:38 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/07 00:29:56 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		add_salle(t_e *e)
 {
-	t_l_chemin *tmp;
-	t_liste1 *tmp1;
+	t_l_chemin	*tmp;
+	t_liste1	*tmp1;
 
 	tmp = e->chemin;
 	while (tmp->next)

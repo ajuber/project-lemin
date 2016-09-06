@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 03:35:32 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/04 19:27:39 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 23:29:41 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		new_chemin(t_e *e)
 {
-	t_l_chemin *tmp;
-	t_l_chemin *tmp_previous;
-	t_liste1 *tmp1;
+	t_l_chemin		*tmp;
+	t_l_chemin		*tmp_previous;
+	t_liste1		*tmp1;
 
 	tmp = e->chemin;
 	tmp_previous = e->chemin;

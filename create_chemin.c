@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 00:09:41 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/06 04:10:43 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/07 00:22:42 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,14 @@
 int		create_chemin(t_e *e)
 {
 	int i;
-//	t_l_chemin *tmp;
-//	t_liste1 *tmp1;
 
 	i = 0;
-/*	tmp = e->chemin;
-	while (tmp->next)
-		tmp = tmp->next;
-	tmp1 = tmp->chemin;
-	while (tmp1->next)
-		tmp1 = tmp1->next;*/
-//	if ((liste_triee(v->l_a, v->l_b)))
-//	{
-//		return (1);
-//	}
 	while (i < e->nb_liaison)
 	{
 		if (check_liaison(e, i) != 0)
 		{
 			if (!(add_salle(e)))
-			{
-				fin_lemin(e);
-				ft_printf_fd(2, "ERROR\n");
-				exit (0);
-			}
+				ft_print_error(e);
 			if (chemin_valid(e))
 				new_chemin(e);
 			if (create_chemin(e) != 0)

@@ -6,13 +6,24 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 03:56:56 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/06 06:08:49 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 23:53:16 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-void	ft_print_chemin(t_e *e)
+static void		under(t_e *e, int i, int j)
+{
+	while (j < e->chemins[i].nb_salle)
+	{
+		ft_printf("%s", e->chemins[i].tab[j]);
+		j++;
+		if (j != e->chemins[i].nb_salle)
+			ft_printf("-");
+	}
+}
+
+void			ft_print_chemin(t_e *e)
 {
 	int i;
 	int j;
@@ -28,13 +39,7 @@ void	ft_print_chemin(t_e *e)
 			k++;
 			ft_printf("Chemin %d :\n", k);
 			j = 0;
-			while (j < e->chemins[i].nb_salle)
-			{
-				ft_printf("%s", e->chemins[i].tab[j]);
-				j++;
-				if (j != e->chemins[i].nb_salle)
-					ft_printf("-");
-			}
+			under(e, i, j);
 			ft_printf("\n");
 			if (e->b_x)
 				ft_printf("Nombre de salle : %d\n", e->chemins[i].nb_salle);

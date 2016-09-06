@@ -6,13 +6,13 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 00:31:36 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/06 03:17:09 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 23:27:58 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-static t_l_chemin		*new_list()
+static t_l_chemin		*new_list(void)
 {
 	t_l_chemin *new;
 
@@ -43,13 +43,13 @@ t_l_chemin				*push_back_chemin(t_l_chemin *begin_list)
 	return (begin_list);
 }
 
-void				ft_free_list_chemin(t_l_chemin **begin_list)
+void					ft_free_list_chemin(t_l_chemin **begin_list)
 {
 	t_l_chemin *tmp;
 	t_l_chemin *tmp1;
 
 	tmp1 = begin_list[0];
-	if (tmp1 && tmp1->next)
+	if (begin_list != NULL && tmp1 != NULL && tmp1->next != NULL)
 	{
 		tmp1 = tmp1->next;
 		while (tmp1 != NULL)
@@ -60,7 +60,7 @@ void				ft_free_list_chemin(t_l_chemin **begin_list)
 			ft_memdel((void **)&tmp);
 		}
 	}
-	if (begin_list[0])
+	if (begin_list && begin_list[0])
 	{
 		ft_free_list_lem1(&begin_list[0]->chemin);
 		free(begin_list[0]);

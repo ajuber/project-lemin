@@ -6,13 +6,13 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/04 22:28:51 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/04 23:42:18 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 23:47:09 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-static void test_fourmi_valid(t_e *e, int i)
+static void		test_fourmi_valid(t_e *e, int i)
 {
 	if (e->fourmi[i].salle + 1 == e->chemins[e->fourmi[i].chemin].nb_salle)
 	{
@@ -22,7 +22,7 @@ static void test_fourmi_valid(t_e *e, int i)
 	}
 }
 
-void	ft_print_parcours(t_e *e)
+void			ft_print_parcours(t_e *e)
 {
 	int i;
 	int test;
@@ -36,7 +36,8 @@ void	ft_print_parcours(t_e *e)
 			if (test)
 				ft_printf(" ");
 			test = 1;
-			ft_printf("L%d-%s", i + 1, e->chemins[e->fourmi[i].chemin].tab[e->fourmi[i].salle]);
+			ft_printf("L%d-%s", i + 1,
+					e->chemins[e->fourmi[i].chemin].tab[e->fourmi[i].salle]);
 			test_fourmi_valid(e, i);
 		}
 		i++;

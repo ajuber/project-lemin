@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/11 15:32:08 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/06 03:15:57 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 23:28:31 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ static t_liste		*new_list(char *str, char *str1, int s)
 	return (new);
 }
 
-t_liste		*push_back_lem(t_liste *begin_list, char *str, char *str1, int s)
+t_liste				*push_back_lem(t_liste *begin_list,
+		char *str, char *str1, int s)
 {
 	t_liste *new;
 	t_liste *tmp;
@@ -61,7 +62,6 @@ int					count_list_lem(t_liste *begin_list)
 	}
 	return (i);
 }
-
 
 void				ft_free_list_lem(t_liste **begin_list)
 {

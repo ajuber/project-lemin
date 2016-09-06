@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/06 02:50:24 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/06 04:08:27 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/07 00:45:29 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ void	fin_lemin(t_e *e)
 	ft_free_liaison(e, &e->liaison1);
 	ft_free_fourmi(&e->fourmi);
 	ft_free_chemin_order(&e->chemin_order);
-	get_next_line(0, NULL);
 }

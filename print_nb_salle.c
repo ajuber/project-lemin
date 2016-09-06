@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/06 05:50:03 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/06 06:10:09 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 23:24:29 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ void	print_nb_salle(t_e *e)
 		if (e->chemins[i].valid != 0)
 		{
 			j++;
-			ft_printf("chemin %d nombre de salle : %d\n", j, e->chemins[i].nb_salle);
+			ft_printf("chemin %d nombre de salle : %d\n", j,
+					e->chemins[i].nb_salle);
 		}
 		i++;
 	}

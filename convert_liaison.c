@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/01 05:20:42 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/01 23:29:44 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/07 00:20:38 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		convert_liaison(t_e *e)
 {
-	int i;
-	t_liste *tmp;
+	int			i;
+	t_liste		*tmp;
 
 	i = 0;
 	e->nb_liaison = count_list_lem(e->liaison);

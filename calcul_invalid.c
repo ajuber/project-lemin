@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 00:45:13 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/06 05:21:59 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/07 00:30:24 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	calcul_invalid(t_e *e)
 	int diff;
 
 	diff = e->chemin_order[e->ind_max].nb_salle - e->chemin_order[0].nb_salle;
-//	ft_printf("diff : %d ind_max : %d nb_fourmi_parti : %d\n", diff, e->ind_max, e->nb_fourmi_parti);
 	if (diff * e->ind_max > e->nb_fourmi_parti)
 	{
 		e->chemin_order[e->ind_max].valid = 0;

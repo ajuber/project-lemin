@@ -6,34 +6,17 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/04 19:28:11 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/06 02:09:25 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/07 00:19:56 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-int		convert_chemin(t_e *e)
+static int		under(t_e *e, int i, t_l_chemin *tmp1)
 {
-	int i;
-	t_liste1 *tmp;
-	t_l_chemin *tmp1;
-	int j;
+	int			j;
+	t_liste1	*tmp;
 
-	i = 0;
-	if (!(e->chemins = (t_tab_chemin *)malloc(sizeof(t_tab_chemin) * e->nb_chemin)))
-		return (0);
-	tmp1 = e->chemin;
-	while (i < e->nb_chemin)
-	{
-		if (!(e->chemins[i].tab = (char **)malloc(sizeof(char *) * (tmp1->nb_salle + 2))))
-			return (0);
-		e->chemins[i].nb_salle = tmp1->nb_salle + 2;
-		e->chemins[i].valid = 1;
-		tmp1 = tmp1->next;
-		i++;
-	}
-	i = 0;
-	tmp1 = e->chemin;
 	while (i < e->nb_chemin)
 	{
 		j = 0;
@@ -48,5 +31,32 @@ int		convert_chemin(t_e *e)
 		tmp1 = tmp1->next;
 		i++;
 	}
+	return (1);
+}
+
+int				convert_chemin(t_e *e)
+{
+	int			i;
+	t_l_chemin	*tmp1;
+
+	i = 0;
+	if (!(e->chemins =
+				(t_tab_chemin *)malloc(sizeof(t_tab_chemin) * e->nb_chemin)))
+		return (0);
+	tmp1 = e->chemin;
+	while (i < e->nb_chemin)
+	{
+		if (!(e->chemins[i].tab =
+					(char **)malloc(sizeof(char *) * (tmp1->nb_salle + 2))))
+			return (0);
+		e->chemins[i].nb_salle = tmp1->nb_salle + 2;
+		e->chemins[i].valid = 1;
+		tmp1 = tmp1->next;
+		i++;
+	}
+	i = 0;
+	tmp1 = e->chemin;
+	if (!under(e, i, tmp1))
+		return (0);
 	return (1);
 }

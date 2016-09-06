@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/30 18:22:41 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/06 05:53:25 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/07 00:33:00 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,88 +56,91 @@ typedef struct				s_order
 	int						valid;
 }							t_order;
 
-typedef struct		s_e
+typedef struct				s_e
 {
-	char			*line;
-	int				start;
-	char			*start1;
-	int				end;
-	char			*end1;
-	int				nb_ant;
-	t_liste			*salle;
-	t_liste			*liaison;
-	char			***liaison1;
-	t_l_chemin		*chemin;
-	int				nb_liaison;
-	char			*new_salle;
-	int				nb_chemin;
-	t_tab_chemin	*chemins;
-	t_fourmi		*fourmi;
-	int				nb_fourmi;
-	t_order			*chemin_order;
-	int				nb_real_chemin;
-	int				ind_max;
-	int				nb_fourmi_parti;
-	t_liste1		*donne;
-	int				donnee_error;
-	t_liste1		*last_acq;
-	int				b_h;
-	int				b_c;
-	int				b_t;
-	int				b_e;
-	int				b_v;
-	int				b_x;
-	int				b_z;
-	int				nb_tour;
-	int				nb_deplacement;
-}					t_e;
+	char					*line;
+	int						start;
+	char					*start1;
+	int						end;
+	char					*end1;
+	int						nb_ant;
+	t_liste					*salle;
+	t_liste					*liaison;
+	char					***liaison1;
+	t_l_chemin				*chemin;
+	int						nb_liaison;
+	char					*new_salle;
+	int						nb_chemin;
+	t_tab_chemin			*chemins;
+	t_fourmi				*fourmi;
+	int						nb_fourmi;
+	t_order					*chemin_order;
+	int						nb_real_chemin;
+	int						ind_max;
+	int						nb_fourmi_parti;
+	t_liste1				*donne;
+	int						donnee_error;
+	t_liste1				*last_acq;
+	int						b_h;
+	int						b_c;
+	int						b_t;
+	int						b_e;
+	int						b_v;
+	int						b_x;
+	int						b_z;
+	int						nb_tour;
+	int						nb_deplacement;
+}							t_e;
 
-int					is_infos(t_e *e, int i);
-int					recup_salle(t_e *e);
-int					recup_nb_ant(t_e *e);
-int					is_liaison(t_e *e);
-void				free_line(char **line);
-int					recup_liaison(t_e *e);
-void				ft_print_salle(t_e *e);
-void				ft_print_liaison(t_e *e);
-int					get_salle(t_e *e);
-int					get_coor(t_e *e);
-t_liste				*push_back_lem(t_liste *begin_list, char *str, char *str1, int s);
-t_liste1			*push_back_lem1(t_liste1 *begin_list, char *str);
-int					add_infos(t_e *e);
-int					no_start_no_end(t_e *e);
-int					convert_liaison(t_e *e);
-void				ft_print_convert_liaison(t_e *e);
-int					count_list_lem(t_liste *list);
-int					check_liaison(t_e *e, int i);
-t_l_chemin			*push_back_chemin(t_l_chemin *begin_list);
-int					add_salle(t_e *e);
-int					chemin_valid(t_e *e);
-int					new_chemin(t_e *e);
-void				del_last_salle(t_e *e);
-int					create_chemin(t_e *e);
-void				ft_print_chemin(t_e *e);
-void				del_chemin(t_e *e);
-void				ft_free_list_lem1(t_liste1 **begin_list);
-int					convert_chemin(t_e *e);
-void				ft_print_convert_chemin(t_e *e);
-void				invalid_chemin(t_e *e);
-int					parcours(t_e *e);
-int					init_fourmi(t_e *e);
-void				ft_print_parcours(t_e *e);
-int					create_order(t_e *e);
-void				calcul_invalid(t_e *e);
-int					recup_donnee(t_e *e);
-void				ft_print_donnee(t_e *e);
-void				fin_lemin(t_e *e);
-void				ft_free_list_lem(t_liste **begin_list);
-void				ft_free_list_chemin(t_l_chemin **begin_list);
-void				ft_free_tab_chemin(t_e *e, t_tab_chemin **begin_list);
-void				ft_free_liaison(t_e *e, char ****begin);
-void				ft_free_fourmi(t_fourmi **begin_list);
-void				ft_free_chemin_order(t_order **begin_list);
-void				ft_print_help(void);
-int					calc_nb_chemin(t_e *e);
-void				print_nb_salle(t_e *e);
+int							is_infos(t_e *e, int i);
+int							recup_salle(t_e *e);
+int							recup_nb_ant(t_e *e);
+int							is_liaison(t_e *e);
+void						free_line(char **line);
+int							recup_liaison(t_e *e);
+void						ft_print_salle(t_e *e);
+void						ft_print_liaison(t_e *e);
+int							get_salle(t_e *e);
+int							get_coor(t_e *e);
+t_liste						*push_back_lem(t_liste *begin_list, char *str,
+		char *str1, int s);
+t_liste1					*push_back_lem1(t_liste1 *begin_list, char *str);
+int							add_infos(t_e *e);
+int							no_start_no_end(t_e *e);
+int							convert_liaison(t_e *e);
+void						ft_print_convert_liaison(t_e *e);
+int							count_list_lem(t_liste *list);
+int							check_liaison(t_e *e, int i);
+t_l_chemin					*push_back_chemin(t_l_chemin *begin_list);
+int							add_salle(t_e *e);
+int							chemin_valid(t_e *e);
+int							new_chemin(t_e *e);
+void						del_last_salle(t_e *e);
+int							create_chemin(t_e *e);
+void						ft_print_chemin(t_e *e);
+void						del_chemin(t_e *e);
+void						ft_free_list_lem1(t_liste1 **begin_list);
+int							convert_chemin(t_e *e);
+void						ft_print_convert_chemin(t_e *e);
+void						invalid_chemin(t_e *e);
+int							parcours(t_e *e);
+int							init_fourmi(t_e *e);
+void						ft_print_parcours(t_e *e);
+int							create_order(t_e *e);
+void						calcul_invalid(t_e *e);
+int							recup_donnee(t_e *e);
+void						ft_print_donnee(t_e *e);
+void						fin_lemin(t_e *e);
+void						ft_free_list_lem(t_liste **begin_list);
+void						ft_free_list_chemin(t_l_chemin **begin_list);
+void						ft_free_tab_chemin(t_e *e,
+		t_tab_chemin **begin_list);
+void						ft_free_liaison(t_e *e, char ****begin);
+void						ft_free_fourmi(t_fourmi **begin_list);
+void						ft_free_chemin_order(t_order **begin_list);
+void						ft_print_help(void);
+int							calc_nb_chemin(t_e *e);
+void						print_nb_salle(t_e *e);
+int							ft_print_error(t_e *e);
 
 #endif
