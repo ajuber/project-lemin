@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/04 21:24:47 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/06 02:27:58 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 05:23:53 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ static void	parcours_graphe(t_e *e)
 	while (i < e->nb_fourmi)
 	{
 		if (e->fourmi[i].chemin != -1)
+		{
 			e->fourmi[i].salle += 1;
+			e->nb_deplacement++;
+		}
 		i++;
 	}
 }
@@ -34,7 +37,8 @@ int		parcours(t_e *e)
 	e->nb_fourmi_parti = e->nb_ant;
 	if (!init_fourmi(e))
 		return (0);
-	ft_print_donnee(e);
+	if (!e->b_e)
+		ft_print_donnee(e);
 	while (e->nb_ant)
 	{
 		i = 0;
@@ -42,7 +46,7 @@ int		parcours(t_e *e)
 		j = 0;
 		while (i < e->nb_chemin)
 		{
-			while (i < e->nb_chemin && e->chemins[i].valid == 0)
+			while (i < e->nb_chemin && e->chemins[i].valid != 1)
 				i++;
 			if (i < e->nb_chemin)
 			{
@@ -60,6 +64,7 @@ int		parcours(t_e *e)
 			//ft_printf("%d\n", i);
 			j++;
 		}
+		e->nb_tour++;
 		parcours_graphe(e);
 		ft_print_parcours(e);
 		//ft_printf("%d\n", e->nb_ant);

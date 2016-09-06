@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/30 18:22:41 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/06 04:04:25 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 05:53:25 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,15 @@ typedef struct		s_e
 	t_liste1		*donne;
 	int				donnee_error;
 	t_liste1		*last_acq;
+	int				b_h;
+	int				b_c;
+	int				b_t;
+	int				b_e;
+	int				b_v;
+	int				b_x;
+	int				b_z;
+	int				nb_tour;
+	int				nb_deplacement;
 }					t_e;
 
 int					is_infos(t_e *e, int i);
@@ -127,5 +136,8 @@ void				ft_free_tab_chemin(t_e *e, t_tab_chemin **begin_list);
 void				ft_free_liaison(t_e *e, char ****begin);
 void				ft_free_fourmi(t_fourmi **begin_list);
 void				ft_free_chemin_order(t_order **begin_list);
+void				ft_print_help(void);
+int					calc_nb_chemin(t_e *e);
+void				print_nb_salle(t_e *e);
 
 #endif

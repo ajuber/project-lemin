@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calcul_invalid.c                                   :+:      :+:    :+:   */
+/*   ft_print_help.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/05 00:45:13 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/06 05:21:59 by ajubert          ###   ########.fr       */
+/*   Created: 2016/09/06 04:55:17 by ajubert           #+#    #+#             */
+/*   Updated: 2016/09/06 05:04:07 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-void	calcul_invalid(t_e *e)
+void	ft_print_help(void)
 {
-	int diff;
-
-	diff = e->chemin_order[e->ind_max].nb_salle - e->chemin_order[0].nb_salle;
-//	ft_printf("diff : %d ind_max : %d nb_fourmi_parti : %d\n", diff, e->ind_max, e->nb_fourmi_parti);
-	if (diff * e->ind_max > e->nb_fourmi_parti)
-	{
-		e->chemin_order[e->ind_max].valid = 0;
-		e->chemins[e->chemin_order[e->ind_max].ind].valid = 2;
-		e->ind_max--;
-		e->nb_real_chemin--;
-		calcul_invalid(e);
-	}
+	ft_printf("\tHELP\n-c : Nombre de deplacement\n-t : Nombre de tour\n-e : enlever l affichage des donnees\n-v : Nombre de chemin utilise\n-x : nombre de salle dans chaque chemin\n-z : Affichage des chemins\n\n");
 }
