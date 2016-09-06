@@ -25,4 +25,5 @@ void	fin_lemin(t_e *e)
 	ft_free_liaison(e, &e->liaison1);
 	ft_free_fourmi(&e->fourmi);
 	ft_free_chemin_order(&e->chemin_order);
+	get_next_line(0, NULL);
 }

@@ -28,6 +28,11 @@ void	ft_free_tab_chemin(t_e *e, t_tab_chemin **begin_list)
 				free_line(&begin_list[0][i].tab[j]);
 				j++;
 			}
+	//		if (begin_list[0])
+	//		{
+				free(begin_list[0][i].tab);
+				begin_list[0][i].tab = NULL;
+	//		}
 			i++;
 		}
 	}

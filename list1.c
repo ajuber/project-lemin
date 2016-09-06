@@ -57,7 +57,8 @@ void				ft_free_list_lem1(t_liste1 **begin_list)
 			tmp = tmp1;
 			tmp1 = tmp1->next;
 			free(tmp->str);
-			ft_memdel((void **)&tmp);
+			free(tmp);
+			tmp = NULL;
 		}
 	}
 	if (begin_list[0])

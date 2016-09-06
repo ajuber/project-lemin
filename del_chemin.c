@@ -79,6 +79,8 @@ void	del_chemin(t_e *e)
 		tmp_previous = tmp_previous->next;
 	}
 	ft_free_list_lem1(&tmp->chemin);
+	free(tmp);
+	tmp = NULL;
 	tmp_previous->next = NULL;
 //	del_chemin1(e);
 }

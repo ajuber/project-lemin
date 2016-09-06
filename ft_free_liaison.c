@@ -28,6 +28,8 @@ void	ft_free_liaison(t_e *e, char ****begin)
 				free_line(&begin[0][i][j]);
 				j++;
 			}
+			free(begin[0][i]);
+			begin[0][i] = NULL;
 			i++;
 		}
 	}

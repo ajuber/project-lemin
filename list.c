@@ -82,7 +82,11 @@ void				ft_free_list_lem(t_liste **begin_list)
 		}
 	}
 	if (begin_list[0])
+	{
+		free(begin_list[0]->str);
+		free(begin_list[0]->str1);
 		free(begin_list[0]);
+	}
 	tmp1 = NULL;
 	begin_list[0] = NULL;
 }

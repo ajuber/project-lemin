@@ -61,7 +61,10 @@ void				ft_free_list_chemin(t_l_chemin **begin_list)
 		}
 	}
 	if (begin_list[0])
+	{
+		ft_free_list_lem1(&begin_list[0]->chemin);
 		free(begin_list[0]);
+	}
 	tmp1 = NULL;
 	begin_list[0] = NULL;
 }
