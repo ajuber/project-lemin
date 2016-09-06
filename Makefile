@@ -6,7 +6,7 @@
 #    By: ajubert <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/05 14:28:27 by ajubert           #+#    #+#              #
-#    Updated: 2016/09/05 01:32:35 by ajubert          ###   ########.fr        #
+#    Updated: 2016/09/06 04:04:55 by ajubert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,14 @@ SRC_C=	main.c\
 		ft_print_parcours.c\
 		init_fourmi.c\
 		calcul_invalid.c\
-		create_order.c
+		create_order.c\
+		recup_donnee.c\
+		ft_print_donnee.c\
+		fin_lemin.c\
+		ft_free_tab_chemin.c\
+		ft_free_liaison.c\
+		ft_free_fourmi.c\
+		ft_free_chemin_order.c
 
 SRC_O=		$(SRC_C:.c=.o)
 

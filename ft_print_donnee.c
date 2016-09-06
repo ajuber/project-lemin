@@ -1,20 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_liaison.c                                       :+:      :+:    :+:   */
+/*   ft_print_donnee.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/31 23:04:58 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/05 23:40:26 by ajubert          ###   ########.fr       */
+/*   Created: 2016/09/06 02:15:42 by ajubert           #+#    #+#             */
+/*   Updated: 2016/09/06 02:20:15 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-int		is_liaison(t_e *e)
+static void		ft_print_donnee1(t_e *e)
 {
-	if (ft_strchr(e->last_acq->str, '-'))
-		return (1);
-	return (0);
+	t_liste1 *tmp;
+
+	tmp = e->donne;
+	while (tmp != e->last_acq)
+	{
+		ft_printf("%s\n", tmp->str);
+		tmp = tmp->next;
+	}
+}
+
+static void		ft_print_donnee2(t_e *e)
+{
+	t_liste1 *tmp;
+
+	tmp = e->donne;
+	while (tmp)
+	{
+		ft_printf("%s\n", tmp->str);
+		tmp = tmp->next;
+	}
+}
+
+void	ft_print_donnee(t_e *e)
+{
+	if (e->donnee_error)
+		ft_print_donnee1(e);
+	else
+		ft_print_donnee2(e);
+	ft_printf("\n");
 }

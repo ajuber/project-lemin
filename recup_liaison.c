@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/01 03:00:12 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/01 03:55:43 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 02:04:54 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,24 +20,27 @@ static int	under(t_e *e)
 
 	i = 0;
 	tmp = e->salle;
-	while (tmp && ft_strncmp(tmp->str, e->line, ft_strlen(tmp->str)))
+	if (e->last_acq->str[0] == '#')
+		return (1);
+	while (tmp && ft_strncmp(tmp->str, e->last_acq->str, ft_strlen(tmp->str)))
 		tmp = tmp->next;
 	if (tmp == NULL)
 		return (0);
 	tmp = e->salle;
-	while (e->line[i] && e->line[i] != '-')
+	while (e->last_acq->str[i] && e->last_acq->str[i] != '-')
 		i++;
-	if (e->line[i] == '\0')
+	if (e->last_acq->str[i] == '\0')
 		return (0);
 	i++;
+	if (e->last_acq->str[i] == '\0')
+		return (0);
 	ind = i;
-	while (tmp && ft_strcmp(tmp->str, &e->line[i]))
+	while (tmp && ft_strcmp(tmp->str, &e->last_acq->str[i]))
 		tmp = tmp->next;
 	if (tmp == NULL)
 		return (0);
-	if (!(e->liaison = push_back_lem(e->liaison, e->line, &e->line[ind], ind - 1)))
+	if (!(e->liaison = push_back_lem(e->liaison, e->last_acq->str, &e->last_acq->str[ind], ind - 1)))
 		return (0);
-	free_line(&e->line);
 	return (1);
 }
 
@@ -45,8 +48,15 @@ int		recup_liaison(t_e *e)
 {
 	if (!under(e))
 		return (0);
-	while (get_next_line(0, &e->line) > 0)
+	e->last_acq = e->last_acq->next;
+	while (e->last_acq)
+	{
 		if (!under(e))
-			return (0);
+		{
+			e->donnee_error = 1;
+			return (1);
+		}
+		e->last_acq = e->last_acq->next;
+	}
 	return (1);
 }

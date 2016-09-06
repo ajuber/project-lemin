@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/11 15:32:08 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/01 23:10:21 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 03:15:57 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ void				ft_free_list_lem(t_liste **begin_list)
 		{
 			tmp = tmp1;
 			tmp1 = tmp1->next;
+			free(tmp->str);
+			free(tmp->str1);
 			ft_memdel((void **)&tmp);
 		}
 	}

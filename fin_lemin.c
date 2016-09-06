@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_liaison.c                                       :+:      :+:    :+:   */
+/*   fin_lemin.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/31 23:04:58 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/05 23:40:26 by ajubert          ###   ########.fr       */
+/*   Created: 2016/09/06 02:50:24 by ajubert           #+#    #+#             */
+/*   Updated: 2016/09/06 04:08:27 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-int		is_liaison(t_e *e)
+void	fin_lemin(t_e *e)
 {
-	if (ft_strchr(e->last_acq->str, '-'))
-		return (1);
-	return (0);
+	free_line(&e->line);
+	free_line(&e->start1);
+	free_line(&e->end1);
+	ft_free_list_lem(&e->salle);
+	ft_free_list_lem(&e->liaison);
+	ft_free_list_lem1(&e->donne);
+	ft_free_list_chemin(&e->chemin);
+	ft_free_tab_chemin(e, &e->chemins);
+	ft_free_liaison(e, &e->liaison1);
+	ft_free_fourmi(&e->fourmi);
+	ft_free_chemin_order(&e->chemin_order);
 }

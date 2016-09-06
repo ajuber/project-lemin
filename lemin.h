@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/30 18:22:41 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/05 01:54:48 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 04:04:25 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,12 @@ typedef struct		s_e
 	int				nb_real_chemin;
 	int				ind_max;
 	int				nb_fourmi_parti;
+	t_liste1		*donne;
+	int				donnee_error;
+	t_liste1		*last_acq;
 }					t_e;
 
-int					is_infos(t_e *e);
+int					is_infos(t_e *e, int i);
 int					recup_salle(t_e *e);
 int					recup_nb_ant(t_e *e);
 int					is_liaison(t_e *e);
@@ -115,5 +118,14 @@ int					init_fourmi(t_e *e);
 void				ft_print_parcours(t_e *e);
 int					create_order(t_e *e);
 void				calcul_invalid(t_e *e);
+int					recup_donnee(t_e *e);
+void				ft_print_donnee(t_e *e);
+void				fin_lemin(t_e *e);
+void				ft_free_list_lem(t_liste **begin_list);
+void				ft_free_list_chemin(t_l_chemin **begin_list);
+void				ft_free_tab_chemin(t_e *e, t_tab_chemin **begin_list);
+void				ft_free_liaison(t_e *e, char ****begin);
+void				ft_free_fourmi(t_fourmi **begin_list);
+void				ft_free_chemin_order(t_order **begin_list);
 
 #endif

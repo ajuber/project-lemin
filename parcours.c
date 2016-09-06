@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/04 21:24:47 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/05 02:32:39 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 02:27:58 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int		parcours(t_e *e)
 	e->nb_fourmi_parti = e->nb_ant;
 	if (!init_fourmi(e))
 		return (0);
+	ft_print_donnee(e);
 	while (e->nb_ant)
 	{
 		i = 0;

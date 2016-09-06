@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 00:09:41 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/04 17:51:54 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 04:10:43 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int		create_chemin(t_e *e)
 		{
 			if (!(add_salle(e)))
 			{
+				fin_lemin(e);
+				ft_printf_fd(2, "ERROR\n");
 				exit (0);
 			}
 			if (chemin_valid(e))

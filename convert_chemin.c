@@ -6,7 +6,7 @@
 /*   By: ajubert <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/04 19:28:11 by ajubert           #+#    #+#             */
-/*   Updated: 2016/09/04 20:30:52 by ajubert          ###   ########.fr       */
+/*   Updated: 2016/09/06 02:09:25 by ajubert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,10 @@ int		convert_chemin(t_e *e)
 	t_l_chemin *tmp1;
 	int j;
 
-	ft_printf("dans convert_chemin\n");
 	i = 0;
 	if (!(e->chemins = (t_tab_chemin *)malloc(sizeof(t_tab_chemin) * e->nb_chemin)))
 		return (0);
 	tmp1 = e->chemin;
-	ft_printf("avant premier while\n");
 	while (i < e->nb_chemin)
 	{
 		if (!(e->chemins[i].tab = (char **)malloc(sizeof(char *) * (tmp1->nb_salle + 2))))
@@ -35,9 +33,7 @@ int		convert_chemin(t_e *e)
 		i++;
 	}
 	i = 0;
-	ft_printf("avant 2e while\n");
 	tmp1 = e->chemin;
-	ft_printf("avant 2e while\n");
 	while (i < e->nb_chemin)
 	{
 		j = 0;
